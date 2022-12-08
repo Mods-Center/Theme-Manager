@@ -1,0 +1,246 @@
+#!/sbin/sh
+## PAIN
+## Read_Parameters
+Market_Name=`getprop ro.product.marketname`
+Device=`getprop ro.product.device`
+Model=`getprop ro.product.model`
+Brand=`getprop ro.product.brand`
+Name=`getprop ro.product.name`
+Version=`getprop ro.build.version.incremental`
+Android=`getprop ro.build.version.release`
+CPU_ABI=`getprop ro.product.cpu.abi`
+Mediatek=`getprop ro.vendor.mediatek.platform`
+Time=$(date "+%m.%d %H:%M")
+
+
+## Setting_parameters
+umask 022
+TMPDIR=/dev/tmp
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $TMPDIR
+OUTFD=$2
+ZIPFILE=$3
+if [ $Android -ge 11 ]; then
+  PERSISTDIR=/dev/*/.magisk/mirror/persist
+else
+  PERSISTDIR=/sbin/.magisk/mirror/persist
+fi
+
+## Setting_up_module.prop
+id=theme_patcher_universal
+name="MIUI Theme Patcher"
+version=English Patched + Import
+versionCode=221208
+author=🅺🅰🆂🅷🅸
+description=Miui Theme Patcher https://t.me/kakashi1v1
+
+Ver=1.0：$version，Time：$Time
+
+## Finished_module.prop
+echo "id=$id
+name=$name
+version=$Version
+versionCode=$versionCode
+author=$author
+description=$description" > $TMPDIR/module.prop
+
+## Output_service.sh
+echo 'chmod 0731 /data/system/theme' > $TMPDIR/service.sh
+
+## Output_uninstall.sh
+echo 'tmp_list="ThemeManager"
+dda=/data/dalvik-cache/arm
+[ -d $dda"64" ] && dda=$dda"64"
+for i in $tmp_list; do
+	rm -f $dda/system@*@"$i"*
+done
+rm -rf /data/system/package_cache/*
+chattr -i /data/system/theme/rights
+chmod 775 /data/system/theme
+rm -rf /data/system/theme/rights
+rm -rf /data/app/*/com.android.thememanager*
+rm -rf /data/app/com.android.thememanager*' > $TMPDIR/uninstall.sh
+
+
+## Description
+print_modname() {
+  echo "-------------------------------------"
+  echo -e "- Module：\c"
+  echo "$name"
+  sleep 0.1
+  echo -e "- Version：\c"
+  echo "$version"
+  sleep 0.1
+  echo -e "- ID：\c"
+  echo "$id"
+  sleep 0.1
+  echo -e "- Author：\c"
+  echo "🅺🅰🆂🅷🅸"
+  sleep 0.1
+  echo "-------------------------------------"
+  echo "  Please                            "
+  sleep 0.5
+  echo "  Kill                            "
+  sleep 0.5
+  echo "  Yourself                         "
+  sleep 0.5
+  echo "  And                      "
+  sleep 0.5
+  echo "  Stop                               "
+  sleep 0.5
+  echo "  Using                             "
+  sleep 0.5
+  echo "  MIUI                    "
+  sleep 0.5
+  echo "  DONE!                              "
+  sleep 0.05
+  echo "-------------------------------------"
+  sleep 0.5
+  echo "- ※ Information ※"
+  sleep 0.1
+  echo "- Brand：$Brand"
+  sleep 0.1
+  echo "- Device：$Device"
+  sleep 0.1
+  echo "- Model：$Model"
+  sleep 0.1
+  case "$Mediatek" in
+    MT*)   echo "- Name：$Market_Name" && sleep 0.1 && echo "- Platform：$Mediatek";;
+    *) echo "Name：$Name";;
+  esac
+  sleep 0.1
+  echo "- ABI：$CPU_ABI"
+  sleep 0.1
+  echo "- Android：$Android"
+  sleep 0.1
+  echo "- MIUI：$Version"
+  echo "-------------------------------------"
+  sleep 0.5
+}
+  
+## Installation
+on_install() {
+  echo "- Flashing..."
+  unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
+  case "$CPU_ABI" in
+      arm64*) Type=arm64 Wenj=arm64-v8a;;
+      arm*) Type=arm Wenj=armeabi-v7a;;
+      x86_64*) Type=x86_64 Wenj=x86_64;;
+      x86*) Type=x86 Wenj=x86;;
+  esac
+  echo
+  sleep 0.1
+  echo "- System$TypeCpu"
+  sleep 0.1
+  echo "- Patching_Theme_APP_lib"
+  mkdir -p $MODPATH/system/app/ThemeManager/lib/$Type
+  mkdir -p $MODPATH/ThemeManager
+  unzip -o $MODPATH/system/app/ThemeManager/ThemeManager.apk -d $MODPATH/ThemeManager >&2
+  cp -rf $MODPATH/ThemeManager/lib/$Wenj/* $MODPATH/system/app/ThemeManager/lib/$Type
+  rm -rf $MODPATH/ThemeManager
+  rm -rf $MODPATH/kashi
+  tmp_list="ThemeManager"
+  dda=/data/dalvik-cache/arm
+  [ -d $dda"64" ] && dda=$dda"64"
+  for i in $tmp_list; do
+	  rm -f $dda/system@*@"$i"*
+  done
+  echo
+  sleep 0.1
+  echo "- Flashing..."
+  rm -rf /data/system/package_cache/*
+  rm -rf /data/data/com.android.thememanager/*
+  rm -rf /data/user/0/com.android.thememanager/*
+  rm -rf /data/user_de/0/com.android.thememanager/*
+  rm -rf /data/app/*/com.android.thememanager*
+  rm -rf /data/app/com.android.thememanager*
+  set_perm_recursive $MODPATH 0 0 0755 0644
+  echo
+  sleep 0.1
+  echo "- Take a shower immediately !!"
+}
+
+
+## Installation Failed
+require_new_magisk() {
+  echo
+  echo "- The current module does not support this Magisk version."
+  sleep 0.1
+  echo "- Please install Magisk v20.3+ !"
+  echo
+  sleep 0.1
+  echo "- Or Magisk Incomplete environment，need to repair the environment !"
+  exit 1
+}
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data 2>/dev/null
+
+[ -f /data/adb/magisk/util_functions.sh ] || require_new_magisk
+. /data/adb/magisk/util_functions.sh
+[ $MAGISK_VER_CODE -gt 18100 ] || require_new_magisk
+
+setup_flashable
+
+mount_partitions
+
+api_level_arch_detect
+
+$BOOTMODE && boot_actions || recovery_actions
+
+unzip -o "$ZIPFILE" module.prop -d $TMPDIR >&2
+[ ! -f $TMPDIR/module.prop ] && abort "! Failed to Extract files from Zip!"
+
+$BOOTMODE && MODDIRNAME=modules_update || MODDIRNAME=modules
+MODULEROOT=$NVBASE/$MODDIRNAME
+MODID=`grep_prop id $TMPDIR/module.prop`
+MODPATH=$MODULEROOT/$MODID
+MODNAME=`grep_prop name $TMPDIR/module.prop`
+
+rm -rf $MODPATH 2>/dev/null
+mkdir -p $MODPATH
+
+cp -r $TMPDIR/module.prop $MODPATH/module.prop
+cp -r $TMPDIR/system.prop $MODPATH/system.prop
+cp -r $TMPDIR/service.sh $MODPATH/service.sh
+cp -r $TMPDIR/uninstall.sh $MODPATH/uninstall.sh
+cp -r $TMPDIR/post-fs-data.sh $MODPATH/post-fs-data.sh
+
+print_modname
+on_install
+
+for TARGET in $REPLACE; do
+  echo "- Deleting target file：$TARGET"
+  mktouch $MODPATH$TARGET/.replace
+done
+
+if $BOOTMODE; then
+  mktouch $NVBASE/modules/$MODID/update
+  cp -af $MODPATH/module.prop $NVBASE/modules/$MODID/module.prop
+fi
+
+if [ -f $MODPATH/sepolicy.rule -a -e $PERSISTDIR ]; then
+  echo "- Install custom sepolicy patch"
+  PERSISTMOD=$PERSISTDIR/magisk/$MODID
+  mkdir -p $PERSISTMOD
+  cp -af $MODPATH/sepolicy.rule $PERSISTMOD/sepolicy.rule
+fi
+
+rm -rf \
+$MODPATH/system/placeholder $MODPATH/customize.sh \
+$MODPATH/README.md $MODPATH/.git* 2>/dev/null
+
+cd /
+$BOOTMODE || recovery_cleanup
+rm -rf $TMPDIR
+echo "-------------------------------------"
+sleep 0.1
+echo "- Time：$Time"
+sleep 0.1
+echo " https://t.me/kakashi1v1."
+sleep 0.1
+echo
+echo "- Done"
+exit 0
