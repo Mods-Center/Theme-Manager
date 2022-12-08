@@ -19,7 +19,7 @@ For issues or questions you can send a message in [Telegram](https://t.me/bootlo
 
 ### Download
 
-Download from [releases page](https://github.com/Mods-Centre/Miui_Theme_Mod/releases)
+Download from [releases page](https://github.com/Mods-Center/Miui_Theme_Mod/releases)
 
 
 ### Screenshots
