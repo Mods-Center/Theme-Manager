@@ -56,7 +56,7 @@ for i in $tmp_list; do
 done
 rm -rf /data/system/package_cache/*
 chattr -i /data/system/theme/rights
-chmod 775 /data/system/theme
+chmod 731 /data/system/theme
 rm -rf /data/system/theme/rights
 rm -rf /data/app/*/com.android.thememanager*
 rm -rf /data/app/com.android.thememanager*' > $TMPDIR/uninstall.sh
