@@ -11,18 +11,20 @@ Its installation is via Magisk on MIUI 12-13 based ROMs with Android 10 or highe
 • Working fine in Global/Indo/Eu/Cn Roms
 • Online Aod, Icons, Dynamic wallpapers
 • Supports new Miui widgets
+• Super Icons unlocked for all MIUI versions
+• Theme preview fixed
 • If you use in your rom, please don't forget to put a credit for our work
 • More..........
 
 For issues or questions you can send a message in [Telegram](https://t.me/bootloop_discussion) group.
 
 
-### Download
+### Download ###
 
 Download from [releases page](https://github.com/Mods-Center/Miui_Theme_Mod/releases)
 
 
-### Screenshots
+### Screenshots ###
 
 [![App UI](https://64.media.tumblr.com/9ad571233312be34bcc5100370244fd0/1d9a1bfdc38053da-21/s1280x1920/1c1d09863777d1f6c322ad63be9f5dc239c26630.pnj)](https://64.media.tumblr.com/9ad571233312be34bcc5100370244fd0/1d9a1bfdc38053da-21/s1280x1920/1c1d09863777d1f6c322ad63be9f5dc239c26630.pnj)
 [![AOD Clocks](https://64.media.tumblr.com/16c8cc5806863695be1e4f3793f54cd0/1d9a1bfdc38053da-a7/s1280x1920/d0d91e93f73265ff75a3ee581d22c7edaf60e9e1.pnj)](https://64.media.tumblr.com/16c8cc5806863695be1e4f3793f54cd0/1d9a1bfdc38053da-a7/s1280x1920/d0d91e93f73265ff75a3ee581d22c7edaf60e9e1.pnj)
