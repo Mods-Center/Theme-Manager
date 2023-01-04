@@ -13,8 +13,8 @@ Its installation is via Magisk on MIUI 12-13 based ROMs with Android 10 or highe
 • Supports new Miui widgets
 • Super Icons unlocked for all MIUI versions
 • Theme preview fixed
-• If you use in your rom, please don't forget to put a credit for our work
-• More..........
+• If you use in your rom, please don't forget to give credits for the effort.
+• More...
 
 For issues or questions you can send a message in [Telegram](https://t.me/bootloop_discussion) group.
 
@@ -27,7 +27,7 @@ Download from [releases page](https://github.com/Mods-Center/Miui_Theme_Mod/rele
 ### Screenshots ###
 
 [![App UI](https://telegra.ph/file/f7ae3a187835bc78ea32c.png)](https://telegra.ph/file/f7ae3a187835bc78ea32c.png)
-[!App UI](https://telegra.ph/file/8f8eefc904c942ec0a560.png)](https://telegra.ph/file/8f8eefc904c942ec0a560.png)
+[![App UI](https://telegra.ph/file/8f8eefc904c942ec0a560.png)](https://telegra.ph/file/8f8eefc904c942ec0a560.png)
 [![AOD Clocks](https://64.media.tumblr.com/16c8cc5806863695be1e4f3793f54cd0/1d9a1bfdc38053da-a7/s1280x1920/d0d91e93f73265ff75a3ee581d22c7edaf60e9e1.pnj)](https://64.media.tumblr.com/16c8cc5806863695be1e4f3793f54cd0/1d9a1bfdc38053da-a7/s1280x1920/d0d91e93f73265ff75a3ee581d22c7edaf60e9e1.pnj)
 
 [![Super Icons](https://telegra.ph/file/acd92855ca888a89d2d20.png)](https://telegra.ph/file/acd92855ca888a89d2d20.png)
