@@ -148,6 +148,8 @@ on_install() {
   echo
   sleep 0.1
   echo "- Flashing..."
+  chmod 731 /data/system/theme
+  pm uninstall-system-updates com.android.thememanager
   rm -rf /data/system/package_cache/*
   rm -rf /data/data/com.android.thememanager/*
   rm -rf /data/user/0/com.android.thememanager/*
