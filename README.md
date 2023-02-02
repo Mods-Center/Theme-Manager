@@ -23,11 +23,6 @@ For issues or questions you can send a message in [Telegram](https://t.me/bootlo
 
 Download from [releases page](https://github.com/Mods-Center/Miui_Theme_Mod/releases)
 
-### Note ###
-```sh
-𝐅**𝐤𝐢𝐧' 𝐊𝐚𝐧𝐠𝐞𝐫 𝐂𝐚𝐧 𝐆𝐨 𝐀𝐰𝐚𝐲 𝐀𝐧𝐝 𝐔𝐬𝐢𝐧𝐠 𝐎𝐮𝐫 𝐌𝐨𝐝𝐬 𝐢𝐧 𝐏𝐚𝐢𝐝 𝐑𝐨𝐦 𝐢𝐬 𝐧𝐨𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝
-```
-
 ### Screenshots ###
 
 [![App UI](https://telegra.ph/file/f7ae3a187835bc78ea32c.png)](https://telegra.ph/file/f7ae3a187835bc78ea32c.png)
