@@ -16,7 +16,7 @@ Its installation is via Magisk on MIUI 12-13 based ROMs with Android 10 or highe
 • If you use in your rom, please don't forget to give credits for the effort.
 • More...
 
-For issues or questions you can send a message in [Telegram](https://t.me/bootloop_discussion) group.
+For issues or questions you can send a message in [Telegram](https://t.me/amogus_discussion) group.
 
 
 ### Download ###
@@ -46,4 +46,8 @@ Download from [releases page](https://github.com/Mods-Center/Miui_Theme_Mod/rele
 • Enjoy!
 
 The ROM used in screenshots is MIUI Mind Edition based on MIUI 13 with Android 12 for Redmi Note 10 Pro (sweet).
+
+| Download Mods | Total |
+| --- | --- |
+| GitHub Releases | ![GitHub all releases](https://img.shields.io/github/downloads/Mods-Center/Miui_Theme_Mod/total?logo=GitHub&style=for-the-badge&color=blue) |
 
