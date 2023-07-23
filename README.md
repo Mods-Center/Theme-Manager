@@ -10,7 +10,7 @@ MIUI Theme App modified by [Kashi](https://t.me/kakashi1v1).
 
 ### Changelog
 - English themes.
-- Indonesia server by default.
+- Global server by default.
 - Import Themes option.
 - Online AOD, Icons, Dynamic wallpapers.
 - Supports new MIUI Widgets.
