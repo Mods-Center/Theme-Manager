@@ -15,27 +15,27 @@
 > [!WARNING]
 > **Legacy MIUI project. No longer updated.** It's kept for MIUI 13–14 users. HyperOS users: see [HyperOS Theme Manager Mod](https://github.com/Mods-Center/HyperOS-Theme-Manager).
 
-## ✨ Features
+## Features
 - English themes and the Global server by default
 - Import themes
 - Online AOD, icons and dynamic wallpapers
 - New MIUI widgets and super icons
 - Theme preview fixed
 
-## 📋 Requirements
+## Requirements
 - MIUI 13–14, Android 11 or newer
 - Magisk
 
-## 📥 Installation
+## Installation
 1. Download the latest zip from [**Releases**](https://github.com/Mods-Center/Theme-Manager/releases/latest).
 2. Flash it in Magisk.
 3. Reboot your device.
 
-## ⚠️ Notes
+## Notes
 - Android 13 Global/CN ROMs: Signature verification must be disabled. Flash [Apk Protection Patch](https://github.com/Mods-Center/Apk-Protection-Patch) or [Apk Signature Verification Patch](https://github.com/Mods-Center/Apk-Signature-Verification-Patch) first, or use the Core Patch LSPosed module.
 - If you use this in your ROM, please credit Mods Center. Not for paid ROMs.
 
-## 📸 Screenshots
+## Screenshots
 <p align="center">
   <img src="https://telegra.ph/file/f7ae3a187835bc78ea32c.png" width="23%" alt="MIUI Theme Manager"/>
   <img src="https://telegra.ph/file/8f8eefc904c942ec0a560.png" width="23%" alt="MIUI Theme Manager"/>
@@ -55,8 +55,8 @@
 
 <div align="center">
 
-Made by **[Kashi](https://t.me/kakashi1v1)** · part of **[Mods Center](https://github.com/Mods-Center)**
+Made by **[🅺🅰🆂🅷🅸](https://t.me/kakashi1v1)** · part of **[Mods Center](https://github.com/Mods-Center)**
 
-[📢 Channel](https://t.me/kashis_cringey_stuffs) · [💬 Support group](https://t.me/bootloop_discussion) · [🐞 Report a bug](https://github.com/Mods-Center/Theme-Manager/issues)
+[Channel](https://t.me/kashis_cringey_stuffs) · [Support group](https://t.me/bootloop_discussion) · [Report a bug](https://github.com/Mods-Center/Theme-Manager/issues)
 
 </div>
